@@ -1,2 +1,3 @@
 # ReactEducApp
-React SPA for Education
+
+Single Page Application for Education React - JavaScript
