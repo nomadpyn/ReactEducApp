@@ -8,7 +8,7 @@
     border-radius: 10px;
 }
 
-.cost-item__description {
+.cost-item_description {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -18,24 +18,24 @@
     flex: 1;
 }
 
-.cost-item__h2 {
-    color: blueviolet;
+.cost-item h2 {
+    color: white;
     font-size: 1rem;
     flex: 1;
     margin: 0 1rem;
 }
 
-.color-item__price {
+.cost-item_price {
     font-size: 1rem;
     font-weight: bold;
     color:aliceblue;
-    background-color: aqua;
-    border: 1px solid wheat;
+    background-color: blueviolet;
+    border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
 }
 
-@media(min-width: 380px){
+@media(min-width: 580px){
     .cost-item__description{
         flex-direction: row;
         align-items: center;

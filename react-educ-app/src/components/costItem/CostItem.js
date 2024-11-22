@@ -1,9 +1,16 @@
 import "./CostItem.css";
 
-function CostItem() {
+
+function CostItem(props) {
   return (
     <div className="cost-item">
-      <h2 className="cost-item__h2 ">Элемент расхода</h2>
+    <div>
+        <div>{props.date.toISOString()}</div>
+        </div>
+        <div className="cost-item_description">
+      <h2>{props.description}</h2>
+      <div className="cost-item_price">{props.amount} р</div>
+    </div>
     </div>
   );
 }
