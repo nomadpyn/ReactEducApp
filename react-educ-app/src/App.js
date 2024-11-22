@@ -23,18 +23,10 @@ function App() {
   return (
   <div>
     <h1 style={{margin: '3rem'}}>Начнем изучать React</h1>
-    <CostItem
-    date={costs[0].date}
-    description={costs[0].description}
-    amount={costs[0].amount}/>
-     <CostItem
-    date={costs[1].date}
-    description={costs[1].description}
-    amount={costs[1].amount}/>
-     <CostItem
-    date={costs[2].date}
-    description={costs[2].description}
-    amount={costs[2].amount}/>
+   {costs.map((cost, key) => <CostItem key={key}
+   date={cost.date}
+  description={cost.description}
+amount={cost.amount}/>)}
   </div>
   );
 }
