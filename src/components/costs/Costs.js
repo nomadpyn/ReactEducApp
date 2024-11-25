@@ -1,16 +1,20 @@
+import Card from "../card/Card";
 import CostItem from "../costItem/CostItem";
-import "./Costs.css"
+import "./Costs.css";
 
-function Costs(props){
-
-    return (<div className="costs">{props.costs.map((cost, key) => (
+function Costs(props) {
+  return (
+    <Card className="costs">
+      {props.costs.map((cost, key) => (
         <CostItem
           key={key}
           date={cost.date}
           description={cost.description}
           amount={cost.amount}
         />
-      ))}</div>)
+      ))}
+    </Card>
+  );
 }
 
 export default Costs;
