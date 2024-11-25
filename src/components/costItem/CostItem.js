@@ -2,7 +2,7 @@ import Card from "../card/Card";
 import CostItemDate from "../costItemDate/CostItemDate";
 import "./CostItem.css";
 
-function CostItem(props) {
+const CostItem = (props) => {
   return (
     <Card className="cost-item">
       <div>

@@ -2,7 +2,7 @@ import Card from "../card/Card";
 import CostItem from "../costItem/CostItem";
 import "./Costs.css";
 
-function Costs(props) {
+const Costs = (props) => {
   return (
     <Card className="costs">
       {props.costs.map((cost, key) => (
