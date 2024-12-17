@@ -29,17 +29,36 @@ const CostForm = () => {
     });
   };
 
+  const onSubmitForm = (e) => {
+    e.preventDefault();
+
+    const costData = {
+        name: userInput.name,
+        amount: userInput.amount,
+        date: new Date(userInput.date)
+    };
+
+    setUserInput({
+        name: '',
+        amount: '',
+        date: ''
+    });
+
+    console.log(costData);
+  };
+
   return (
-    <form>
+    <form onSubmit={onSubmitForm}>
       <div className="new-cost-controls">
         <div className="new-cost-control">
           <label>Название</label>
-          <input type="text" onChange={nameChangeHandler} />
+          <input type="text" value={userInput.name} onChange={nameChangeHandler} />
         </div>
         <div className="new-cost-control">
           <label>Сумма (руб)</label>
           <input
             type="number"
+            value={userInput.amount}
             min="0.01"
             step="0.01"
             onChange={amountChangeHandler}
@@ -47,7 +66,7 @@ const CostForm = () => {
         </div>
         <div className="new-cost-control">
           <label>Дата</label>
-          <input type="date" min="2024-01-01" onChange={dateChangeHandler} />
+          <input type="date" value={userInput.date} min="2024-01-01" onChange={dateChangeHandler} />
         </div>
       </div>
       <div className="new-cost-actions">
