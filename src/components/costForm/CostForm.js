@@ -10,39 +10,44 @@ const CostForm = () => {
 
   const nameChangeHandler = (e) => {
     setUserInput({
-        ...userInput,   
-        name: e.target.value
-    })
-  }
+      ...userInput,
+      name: e.target.value,
+    });
+  };
 
   const amountChangeHandler = (e) => {
     setUserInput({
-        ...userInput,
-        amount: e.target.value
-    })
-  }
+      ...userInput,
+      amount: e.target.value,
+    });
+  };
 
   const dateChangeHandler = (e) => {
     setUserInput({
-        ...userInput,
-        date: e.target.value
-    })
-  }
+      ...userInput,
+      date: e.target.value,
+    });
+  };
 
   return (
     <form>
       <div className="new-cost-controls">
         <div className="new-cost-control">
           <label>Название</label>
-          <input type="text" onChange={nameChangeHandler}/>
+          <input type="text" onChange={nameChangeHandler} />
         </div>
         <div className="new-cost-control">
           <label>Сумма (руб)</label>
-          <input type="number" min="0.01" step="0.01" onChange={amountChangeHandler}/>
+          <input
+            type="number"
+            min="0.01"
+            step="0.01"
+            onChange={amountChangeHandler}
+          />
         </div>
         <div className="new-cost-control">
           <label>Дата</label>
-          <input type="date" min="2024-01-01" onChange={dateChangeHandler}/>
+          <input type="date" min="2024-01-01" onChange={dateChangeHandler} />
         </div>
       </div>
       <div className="new-cost-actions">
