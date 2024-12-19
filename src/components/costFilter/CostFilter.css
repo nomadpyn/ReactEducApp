@@ -1,0 +1,14 @@
+.cost-filter {
+  display: flex;
+  justify-content: end;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.cost-filter-control {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: white;
+  border-radius: 50px;
+}
